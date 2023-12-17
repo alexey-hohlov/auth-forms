@@ -1,0 +1,19 @@
+.greetings {
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    span {
+        font-family: MontserratBold;
+        font-size: 60px;
+    }
+
+    button {
+        width: 150px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
