@@ -1,0 +1,15 @@
+.login {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    place-items: center;
+    gap: 10px;
+
+    width: 400px;
+}
+
+.header {
+    color: white;
+    font-family: MontserratBold;
+    font-size: 50px;
+}
