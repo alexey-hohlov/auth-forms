@@ -7,17 +7,18 @@ type Ref = HTMLButtonElement;
 interface Props {
     title: string;
     color: Colors;
+    onClick: () => void;
 }
 
-// const Button: React.FC<Props> = ({ title, color }) => {
-//     return (
-//         <button className={`${styles.button} ${styles[color]}`}>{title}</button>
-//     );
-// };
-
-const Button = forwardRef<Ref, Props>(({ title, color }, ref) => {
+const Button = forwardRef<Ref, Props>(({ title, color, onClick }, ref) => {
     return (
-        <button ref={ref} className={`${styles.button} ${styles[color]}`}>{title}</button>
+        <button
+            ref={ref}
+            className={`${styles.button} ${styles[color]}`}
+            onClick={onClick}
+        >
+            {title}
+        </button>
     );
 });
 

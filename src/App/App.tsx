@@ -1,15 +1,22 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Greetings } from '../components';
-import styles from './App.module.scss';
-import { Home } from '../pages';
+import { Layout, Login } from '../pages';
 
 function App() {
-    const router = createBrowserRouter([{ path: '/', element: <Home /> }]);
+    const router = createBrowserRouter([
+        {
+            path: '/',
+            element: <Layout />,
+            children: [
+                { element: <Greetings />, index: true },
+                { path: 'login', element: <Login /> },
+            ],
+        },
+    ]);
 
     return (
-        <div className={styles.app}>
-            {/* <Greetings /> */}
-            <RouterProvider router={router}/>
+        <div className='app'>
+            <RouterProvider router={router} />
         </div>
     );
 }
