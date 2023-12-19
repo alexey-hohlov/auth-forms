@@ -23,3 +23,34 @@ export const scale = {
     }),
 };
 
+export const slideFromLeft = {
+    hidden: {
+        opacity: 0,
+        x: -100,
+    },
+    visible: (custom: number) => ({
+        opacity: 1,
+        x: 1,
+        transition: {
+            delay: custom * 0.2,
+            type: 'spring',
+            duration: 0.85,
+        },
+    }),
+};
+
+export const slideFromRight = {
+    hidden: {
+        opacity: 0,
+        x: 100,
+    },
+    visible: (custom: number) => ({
+        opacity: 1,
+        x: 1,
+        transition: {
+            delay: custom * 0.2,
+            type: 'spring',
+            duration: 0.85,
+        },
+    }),
+};

@@ -1,27 +1,62 @@
 import { motion } from 'framer-motion';
-import { GlassWrapper } from '../../components';
+import { Button, GlassWrapper, Input } from '../../components';
 import styles from './Login.module.scss';
-import { scale } from '../../utils/animations';
+import {
+    appear,
+    scale,
+    slideFromLeft,
+    slideFromRight,
+} from '../../utils/animations';
+import { FormProvider, useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 const Login: React.FC = () => {
     const MGlassWrapper = motion(GlassWrapper);
+    const methods = useForm();
+    const MInput = motion(Input);
+    const MButton = motion(Button)
+
+    const handleSubmit = () => {};
 
     return (
         <MGlassWrapper initial={'hidden'} animate={'visible'} variants={scale}>
             <div className={styles.login}>
-                <motion.span className={styles.header}>Sign in</motion.span>
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Enim et, fugit expedita quo quos at maiores consequuntur
-                    delectus qui magni odio sit, officiis iste fugiat molestiae
-                    repudiandae aut facilis atque.
-                </span>
-                <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptas minus deserunt numquam soluta totam iusto ipsum
-                    voluptates quos. Numquam, voluptates neque. Repellat harum
-                    explicabo ab a eos, natus modi consequatur?
-                </span>
+                <motion.span
+                    className={styles.header}
+                    variants={slideFromLeft}
+                    custom={1}
+                >
+                    Sign in
+                </motion.span>
+                <FormProvider {...methods}>
+                    <form className={styles.form}>
+                        <MInput
+                            label={'email'}
+                            variants={slideFromRight}
+                            custom={1.5}
+                        />
+                        <MInput
+                            label={'password'}
+                            variants={slideFromLeft}
+                            custom={1.5}
+                        />
+                        <MButton
+                            title={'Submit'}
+                            color={'white'}
+                            onClick={handleSubmit}
+                            variants={scale}
+                            custom={2}
+                        />
+                    </form>
+                </FormProvider>
+                <motion.div
+                    variants={appear}
+                    custom={2.5}
+                    className={styles.signUp}
+                >
+                    New to our service?
+                    <Link to={'/'}>Create an account</Link>
+                </motion.div>
             </div>
         </MGlassWrapper>
     );
