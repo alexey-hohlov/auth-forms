@@ -12,7 +12,7 @@ import {
 import { FormProvider, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
-const SignUp = () => {
+const SignUp: React.FC = () => {
     const MGlassWrapper = motion(GlassWrapper);
     const MInput = motion(Input);
     const MButton = motion(Button);

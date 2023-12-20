@@ -29,7 +29,7 @@ const Login: React.FC = () => {
                 <motion.span
                     className={styles.header}
                     variants={slideFromLeft}
-                    custom={2}
+                    custom={3}
                 >
                     Sign in
                 </motion.span>
@@ -38,29 +38,32 @@ const Login: React.FC = () => {
                         <MInput
                             label={'email'}
                             variants={slideFromRight}
-                            custom={3}
+                            custom={5}
                         />
                         <MInput
                             label={'password'}
                             variants={slideFromLeft}
-                            custom={5}
+                            custom={7}
                         />
                         <MButton
                             title={'Submit'}
                             color={'white'}
                             onClick={handleSubmit}
                             variants={scale}
-                            custom={8}
+                            custom={10}
                         />
                     </form>
                 </FormProvider>
                 <motion.div
                     variants={appear}
-                    custom={10}
+                    custom={13}
                     className={styles.signUp}
                 >
                     New to our service?
                     <Link to={'/sign-up'}>Create an account</Link>
+                </motion.div>
+                <motion.div variants={appear} custom={14}>
+                    <Link to={'/password-reset'}>Forgot password?</Link>
                 </motion.div>
             </div>
         </MGlassWrapper>
