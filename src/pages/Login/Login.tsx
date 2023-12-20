@@ -12,19 +12,24 @@ import { Link } from 'react-router-dom';
 
 const Login: React.FC = () => {
     const MGlassWrapper = motion(GlassWrapper);
-    const methods = useForm();
     const MInput = motion(Input);
-    const MButton = motion(Button)
+    const MButton = motion(Button);
+    const methods = useForm();
 
     const handleSubmit = () => {};
 
     return (
-        <MGlassWrapper initial={'hidden'} animate={'visible'} variants={scale}>
+        <MGlassWrapper
+            initial={'hidden'}
+            animate={'visible'}
+            variants={scale}
+            custom={1}
+        >
             <div className={styles.login}>
                 <motion.span
                     className={styles.header}
                     variants={slideFromLeft}
-                    custom={1}
+                    custom={2}
                 >
                     Sign in
                 </motion.span>
@@ -33,29 +38,29 @@ const Login: React.FC = () => {
                         <MInput
                             label={'email'}
                             variants={slideFromRight}
-                            custom={1.5}
+                            custom={3}
                         />
                         <MInput
                             label={'password'}
                             variants={slideFromLeft}
-                            custom={1.5}
+                            custom={5}
                         />
                         <MButton
                             title={'Submit'}
                             color={'white'}
                             onClick={handleSubmit}
                             variants={scale}
-                            custom={2}
+                            custom={8}
                         />
                     </form>
                 </FormProvider>
                 <motion.div
                     variants={appear}
-                    custom={2.5}
+                    custom={10}
                     className={styles.signUp}
                 >
                     New to our service?
-                    <Link to={'/'}>Create an account</Link>
+                    <Link to={'/sign-up'}>Create an account</Link>
                 </motion.div>
             </div>
         </MGlassWrapper>

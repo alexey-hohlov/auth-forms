@@ -19,11 +19,11 @@
     gap: 15px;
     width: 100%;
     place-items: center;
-    
+
     label {
         width: 80%;
     }
-    
+
     button {
         margin-top: 10px;
         width: 105px;
@@ -35,14 +35,4 @@
     display: flex;
     gap: 5px;
     margin-top: 10px;
-
-    a {
-        text-decoration: none;
-        color: #99D2DE;
-
-        &:hover {
-            text-decoration: underline;
-            color: white;
-        }
-    }
 }

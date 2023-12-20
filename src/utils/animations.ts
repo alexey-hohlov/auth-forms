@@ -54,3 +54,35 @@ export const slideFromRight = {
         },
     }),
 };
+
+export const slideFromBottom = {
+    hidden: {
+        opacity: 0,
+        y: 50,
+    },
+    visible: (custom: number) => ({
+        opacity: 1,
+        y: 1,
+        transition: {
+            delay: custom * 0.2,
+            type: 'spring',
+            duration: 0.85,
+        },
+    }),
+};
+
+export const slideFromTop = {
+    hidden: {
+        opacity: 0,
+        y: -50,
+    },
+    visible: (custom: number) => ({
+        opacity: 1,
+        y: 1,
+        transition: {
+            delay: custom * 0.2,
+            type: 'spring',
+            duration: 0.85,
+        },
+    }),
+};
