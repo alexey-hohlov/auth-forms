@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Button, GlassWrapper, Input } from '../../components';
+import { Button, GlassWrapper, Input, PasswordInput } from '../../components';
 import styles from './Login.module.scss';
 import {
     appear,
@@ -9,14 +9,23 @@ import {
 } from '../../utils/animations';
 import { FormProvider, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { validations } from '../../utils/validations';
+import { loginValues } from '../../utils/defaultValues';
 
 const Login: React.FC = () => {
     const MGlassWrapper = motion(GlassWrapper);
     const MInput = motion(Input);
     const MButton = motion(Button);
-    const methods = useForm();
+    const MPasswordInput = motion(PasswordInput);
 
-    const handleSubmit = () => {};
+    const methods = useForm({
+        mode: 'onSubmit',
+        defaultValues: loginValues,
+    });
+
+    const onSubmit = (data: any) => {
+        console.log(data);
+    };
 
     return (
         <MGlassWrapper
@@ -34,21 +43,27 @@ const Login: React.FC = () => {
                     Sign in
                 </motion.span>
                 <FormProvider {...methods}>
-                    <form className={styles.form}>
+                    <form
+                        className={styles.form}
+                        onSubmit={methods.handleSubmit(onSubmit)}
+                    >
                         <MInput
                             label={'email'}
                             variants={slideFromRight}
                             custom={5}
+                            name={'email'}
+                            validations={validations.email}
                         />
-                        <MInput
+                        <MPasswordInput
                             label={'password'}
+                            name={'password'}
+                            validations={validations.password}
                             variants={slideFromLeft}
                             custom={7}
                         />
                         <MButton
                             title={'Submit'}
                             color={'white'}
-                            onClick={handleSubmit}
                             variants={scale}
                             custom={10}
                         />

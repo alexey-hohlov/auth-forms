@@ -7,7 +7,7 @@ type Ref = HTMLButtonElement;
 interface Props {
     title: string;
     color: Colors;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 const Button = forwardRef<Ref, Props>(({ title, color, onClick }, ref) => {

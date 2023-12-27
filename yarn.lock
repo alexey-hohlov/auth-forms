@@ -1674,6 +1674,18 @@
     schema-utils "^3.0.0"
     source-map "^0.7.3"
 
+"@react-input/core@^1.0.5":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@react-input/core/-/core-1.0.6.tgz#0d9947e72b13a6ae23672d639ee755141248d6bd"
+  integrity sha512-iUIslCIwsMdoosPhaAU356YQFzCosR/wa4jZRcNB+VDhWmV7b6AvkBtoL1MRi/54S+DQmhNdp0ukT+Uw3Std5Q==
+
+"@react-input/mask@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@react-input/mask/-/mask-1.0.20.tgz#f37350fbcd4b4c1bd6643f7c12093b9aa08c577e"
+  integrity sha512-UTd1AhSpkzAdq8bb0/lTOlTxBdm1HWOC0bqgP1ICrXKkpathyQ2zBDY3elzEIkCrJ7RxiwdTVVBBrYXZOInZUA==
+  dependencies:
+    "@react-input/core" "^1.0.5"
+
 "@remix-run/router@1.13.1":
   version "1.13.1"
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.13.1.tgz#07e2a8006f23a3bc898b3f317e0a58cc8076b86e"

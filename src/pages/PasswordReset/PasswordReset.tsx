@@ -2,13 +2,18 @@ import styles from './PasswordReset.module.scss';
 import { FormProvider, useForm } from 'react-hook-form';
 import { Button, GlassWrapper, Input } from '../../components';
 import { motion } from 'framer-motion';
-import { appear, scale, slideFromBottom, slideFromLeft, slideFromRight } from '../../utils/animations';
+import { appear, scale, slideFromBottom } from '../../utils/animations';
+import { validations } from '../../utils/validations';
+import { resetValues } from '../../utils/defaultValues';
 
 const PasswordReset: React.FC = () => {
     const MGlassWrapper = motion(GlassWrapper);
     const MInput = motion(Input);
     const MButton = motion(Button);
-    const methods = useForm();
+    const methods = useForm({
+        mode: 'onSubmit',
+        defaultValues: resetValues,
+    });
 
     const handleSubmit = () => {};
 
@@ -28,8 +33,17 @@ const PasswordReset: React.FC = () => {
                     Reset your password
                 </motion.span>
                 <FormProvider {...methods}>
-                    <form className={styles.form}>
-                        <MInput label='email' variants={slideFromBottom} custom={5}/>
+                    <form
+                        className={styles.form}
+                        onSubmit={methods.handleSubmit(handleSubmit)}
+                    >
+                        <MInput
+                            label={'email'}
+                            variants={slideFromBottom}
+                            custom={5}
+                            validations={validations.email}
+                            name={'email'}
+                        />
                         <motion.p variants={appear} custom={7}>
                             Enter your user account's verified email address and
                             we will send you a password reset link.
@@ -37,7 +51,6 @@ const PasswordReset: React.FC = () => {
                         <MButton
                             title={'Send password reset email'}
                             color={'white'}
-                            onClick={handleSubmit}
                             variants={scale}
                             custom={10}
                         />
