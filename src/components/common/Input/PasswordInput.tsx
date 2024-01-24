@@ -27,6 +27,10 @@ const PasswordInput = forwardRef<Ref, Props>(
             setVisible(!isVisible);
         };
 
+        const trimInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+            field.onChange(e.target.value.trim());
+        };
+
         return (
             <label className={styles.wrapper} ref={ref}>
                 {label}
@@ -35,6 +39,7 @@ const PasswordInput = forwardRef<Ref, Props>(
                         className={`${styles.input} ${error && styles.error}`}
                         {...field}
                         type={`${isVisible ? 'text' : 'password'}`}
+                        onChange={trimInput}
                     />
                     {isVisible ? (
                         <HideIcon onClick={handleShow} />

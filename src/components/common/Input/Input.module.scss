@@ -25,6 +25,11 @@
     &:focus {
         outline: none;
     }
+
+    &[type=password]{
+        font: small-caption;
+        letter-spacing: 4px;
+    }
 }
 
 .error {
@@ -63,5 +68,12 @@
             fill: white;
             transition: all 200ms linear;
         }
+    }
+}
+
+.phone {
+    &::placeholder {
+        color: white;
+        opacity: 0.5;
     }
 }

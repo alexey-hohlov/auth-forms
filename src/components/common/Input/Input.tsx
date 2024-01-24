@@ -1,7 +1,7 @@
-import { forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
 import styles from './Input.module.scss';
 import { IValidation } from '../../../types/formTypes';
-import { useController, useFormContext } from 'react-hook-form';
+import { useController } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { scale } from '../../../utils/animations';
 import { ErrorIcon } from '../../../assets';
@@ -22,6 +22,10 @@ const Input = forwardRef<Ref, Props>(
             fieldState: { error },
         } = useController({ name, rules: validations });
 
+        const trimInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+            field.onChange(e.target.value.trim());
+        };
+
         return (
             <label className={styles.wrapper} ref={ref}>
                 {label}
@@ -29,6 +33,7 @@ const Input = forwardRef<Ref, Props>(
                     className={`${styles.input} ${error && styles.error}`}
                     type={type ? type : 'text'}
                     {...field}
+                    onChange={trimInput}
                 />
                 {error && (
                     <motion.div className={styles.message} variants={scale}>

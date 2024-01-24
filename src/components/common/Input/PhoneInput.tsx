@@ -30,7 +30,7 @@ const Input = forwardRef<Ref, Props>(({ label, name, validations }, ref) => {
         <label className={styles.wrapper} ref={ref}>
             {label}
             <input
-                className={`${styles.input} ${error && styles.error}`}
+                className={`${styles.input} ${styles.phone} ${error && styles.error}`}
                 type={'text'}
                 {...field}
                 ref={inputRef}
