@@ -1,0 +1,34 @@
+.modal {
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    overflow: hidden;
+    padding: {
+        left: 10px;
+        right: 10px;
+    }
+}
+
+.content {
+    transform: scale(0.5);
+    transition: 0.4s all;
+}
+
+.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+}
