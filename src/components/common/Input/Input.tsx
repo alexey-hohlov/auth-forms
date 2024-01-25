@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef } from 'react';
 import styles from './Input.module.scss';
 import { IValidation } from '../../../types/formTypes';
 import { useController } from 'react-hook-form';
