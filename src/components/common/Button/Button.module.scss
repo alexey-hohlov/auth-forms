@@ -22,7 +22,7 @@
     color: white;
     border: solid 1px white;
     transition: background 150ms linear;
-    
+
     &:hover {
         background: white;
         color: #051433;
@@ -31,5 +31,21 @@
     &:active {
         background: transparent;
         color: white;
+    }
+}
+
+.blue {
+    color: #4169e1;
+    border: solid 1px #4169e1;
+    transition: background 150ms linear;
+
+    &:hover {
+        background: #4169e1;
+        color: white;
+    }
+
+    &:active {
+        background: transparent;
+        color: #4169e1;
     }
 }

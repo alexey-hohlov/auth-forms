@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import styles from './Button.module.scss';
 
-type Colors = 'white';
+type Colors = 'white' | 'blue';
 type Ref = HTMLButtonElement;
 
 interface Props {

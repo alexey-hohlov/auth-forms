@@ -19,9 +19,10 @@ import { validations } from '../../utils/validations';
 import { loginValues } from '../../utils/defaultValues';
 import { authenticationSlice } from '../../store/reducers/authenticationReducer';
 import { useAppDispatch } from '../../hooks/reduxHooks';
+import { ILoginData } from '../../types/storeTypes';
 
 const Login: React.FC = () => {
-    const { setDialog } = authenticationSlice.actions;
+    const { setDialog, setLoginData } = authenticationSlice.actions;
     const dispatch = useAppDispatch();
     const MGlassWrapper = motion(GlassWrapper);
     const MInput = motion(Input);
@@ -33,8 +34,9 @@ const Login: React.FC = () => {
         defaultValues: loginValues,
     });
 
-    const onSubmit = (data: any) => {
-        console.log(data);
+    const onSubmit = (data: ILoginData) => {
+        dispatch(setLoginData(data));
+        methods.reset();
         dispatch(setDialog(true));
     };
 

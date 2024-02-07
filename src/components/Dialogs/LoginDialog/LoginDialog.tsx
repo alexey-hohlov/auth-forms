@@ -1,25 +1,49 @@
 import { useAppDispatch, useAppSelector } from '../../../hooks/reduxHooks';
 import { authenticationSlice } from '../../../store/reducers/authenticationReducer';
 import styles from './LoginDialog.module.scss';
-import Modal from '../../common/Modal/Modal';
+import { Button, Modal } from '../../index';
 
 const LoginDialog = () => {
-    const { dialog } = useAppSelector(state => state.authenticationReducer);
-    const { setDialog } = authenticationSlice.actions;
+    const { dialog, data } = useAppSelector(
+        state => state.authenticationReducer
+    );
+    const { setDialog, resetData } = authenticationSlice.actions;
     const dispatch = useAppDispatch();
+
+    const handleClose = () => {
+        dispatch(setDialog(false));
+        dispatch(resetData());
+    };
 
     return (
         <Modal
             isOpen={dialog}
             onClose={() => {
-                dispatch(setDialog(false));
+                handleClose();
             }}
         >
-            {dialog && (
-                <div>
-                    <h1>Thank you</h1>
-                </div>
-            )}
+            <div className={styles.wrapper}>
+                <h2>Thank you for logging in</h2>
+                <ul className={styles.list}>
+                    <h3>data sent:</h3>
+                    <li>
+                        email:
+                        <span>{data.loginData.email}</span>
+                    </li>
+                    <li>
+                        password:
+                        <span>{data.loginData.password}</span>
+                    </li>
+                </ul>
+                <Button
+                    title={'Got it 👍'}
+                    color={'blue'}
+                    onClick={handleClose}
+                />
+                <span className={styles.caption}>
+                    *This pop-up is shown for demonstration purposes
+                </span>
+            </div>
         </Modal>
     );
 };
