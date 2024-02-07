@@ -11,4 +11,4 @@ export { default as PhoneInput } from './common/Input/PhoneInput';
 export { default as Modal } from './common/Modal/Modal';
 
 // dialogs
-export { default as LoginDialog } from './common/Dialogs/LoginDialog/LoginDialog';
+export { default as LoginDialog } from './Dialogs/LoginDialog/LoginDialog';

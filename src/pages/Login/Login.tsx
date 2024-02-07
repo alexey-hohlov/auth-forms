@@ -17,8 +17,12 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { validations } from '../../utils/validations';
 import { loginValues } from '../../utils/defaultValues';
+import { authenticationSlice } from '../../store/reducers/authenticationReducer';
+import { useAppDispatch } from '../../hooks/reduxHooks';
 
 const Login: React.FC = () => {
+    const { setDialog } = authenticationSlice.actions;
+    const dispatch = useAppDispatch();
     const MGlassWrapper = motion(GlassWrapper);
     const MInput = motion(Input);
     const MButton = motion(Button);
@@ -31,6 +35,7 @@ const Login: React.FC = () => {
 
     const onSubmit = (data: any) => {
         console.log(data);
+        dispatch(setDialog(true));
     };
 
     return (

@@ -1,15 +1,13 @@
-body, * {
+body {
     margin: 0;
     padding: 0;
     list-style: none;
-    box-sizing: border-box;
-    font-family: Montserrat;
     color: white;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+* {
+    font-family: Montserrat;
+    box-sizing: border-box;
 }
 
 @font-face {

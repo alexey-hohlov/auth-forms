@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IAuthentication } from '../../types/storeTypes';
 
 const initialState: IAuthentication = {
-    dialog: false,
+    dialog: true,
 };
 
 export const authenticationSlice = createSlice({
