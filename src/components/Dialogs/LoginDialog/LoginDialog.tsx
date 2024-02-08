@@ -1,5 +1,4 @@
-import { useAppDispatch, useAppSelector } from '../../../hooks/reduxHooks';
-import { authenticationSlice } from '../../../store/reducers/authenticationReducer';
+import { useAppSelector, useDialog } from '../../../hooks/reduxHooks';
 import styles from './LoginDialog.module.scss';
 import { Button, Modal } from '../../index';
 
@@ -7,21 +6,10 @@ const LoginDialog = () => {
     const { dialog, data } = useAppSelector(
         state => state.authenticationReducer
     );
-    const { setDialog, resetData } = authenticationSlice.actions;
-    const dispatch = useAppDispatch();
-
-    const handleClose = () => {
-        dispatch(setDialog(false));
-        dispatch(resetData());
-    };
+    const { handleClose } = useDialog();
 
     return (
-        <Modal
-            isOpen={dialog}
-            onClose={() => {
-                handleClose();
-            }}
-        >
+        <Modal isOpen={dialog} onClose={handleClose}>
             <div className={styles.wrapper}>
                 <h2>Thank you for logging in</h2>
                 <ul className={styles.list}>

@@ -1,10 +1,22 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IAuthentication, ILoginData } from '../../types/storeTypes';
+import {
+    IAuthentication,
+    ILoginData,
+    ISignUpData,
+} from '../../types/storeTypes';
 
 const initialState: IAuthentication = {
-    dialog: false,
+    dialog: true,
     data: {
         loginData: { email: '', password: '' },
+        signUpData: {
+            email: '',
+            firstName: '',
+            lastName: '',
+            phone: '',
+            password: '',
+            confirmPassword: '',
+        },
     },
 };
 
@@ -17,6 +29,9 @@ export const authenticationSlice = createSlice({
         },
         setLoginData(state, action: PayloadAction<ILoginData>) {
             state.data.loginData = action.payload;
+        },
+        setSignUpData(state, action: PayloadAction<ISignUpData>) {
+            state.data.signUpData = action.payload;
         },
         resetData(state) {
             state.data = initialState.data;

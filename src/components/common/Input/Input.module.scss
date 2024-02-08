@@ -11,6 +11,7 @@
 }
 
 .input {
+    color: var(--color-light);
     border-radius: 5px;
     height: 34px;
     padding: {
@@ -26,7 +27,7 @@
         outline: none;
     }
 
-    &[type=password]{
+    &[type='password'] {
         font: small-caption;
         letter-spacing: 4px;
     }
@@ -65,7 +66,7 @@
         user-select: none;
 
         &:hover {
-            fill: white;
+            fill: var(--color-light);
             transition: all 200ms linear;
         }
     }
@@ -73,7 +74,7 @@
 
 .phone {
     &::placeholder {
-        color: white;
+        color: var(--color-light);
         opacity: 0.5;
     }
 }
