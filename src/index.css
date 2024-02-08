@@ -1,5 +1,8 @@
 body {
-    color: white;
+    color: var(--color-light);
+    --color-blue: #4169e1;
+    --color-dark: #101935;
+    --color-light: #f2fdff;
 }
 
 * {

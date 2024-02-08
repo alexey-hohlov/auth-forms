@@ -19,33 +19,33 @@
 }
 
 .white {
-    color: white;
-    border: solid 1px white;
+    color: var(--color-light);
+    border: solid 1px var(--color-light);
     transition: background 150ms linear;
 
     &:hover {
-        background: white;
-        color: #051433;
+        background: var(--color-light);
+        color: var(--color-dark);
     }
 
     &:active {
         background: transparent;
-        color: white;
+        color: var(--color-light);
     }
 }
 
 .blue {
-    color: #4169e1;
-    border: solid 1px #4169e1;
+    color: var(--color-blue);
+    border: solid 1px var(--color-blue);
     transition: background 150ms linear;
 
     &:hover {
-        background: #4169e1;
+        background: var(--color-blue);
         color: white;
     }
 
     &:active {
         background: transparent;
-        color: #4169e1;
+        color: var(--color-blue);
     }
 }
