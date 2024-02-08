@@ -1,28 +1,23 @@
+import styles from './ResetDialog.module.scss';
+import { Modal, Button } from '../../';
 import { useAppSelector, useDialog } from '../../../hooks/reduxHooks';
-import styles from './LoginDialog.module.scss';
-import { Button, Modal } from '../../index';
 
-const LoginDialog: React.FC = () => {
+const ResetDialog: React.FC = () => {
     const { dialog, data } = useAppSelector(
         state => state.authenticationReducer
     );
+
     const { handleClose } = useDialog();
 
     return (
         <Modal isOpen={dialog} onClose={handleClose}>
             <div className={styles.wrapper}>
-                <h2>Thank you for logging in</h2>
-                <ul className={styles.list}>
-                    <h3>data sent:</h3>
-                    <li>
-                        email:
-                        <span>{data.loginData.email}</span>
-                    </li>
-                    <li>
-                        password:
-                        <span>{data.loginData.password}</span>
-                    </li>
-                </ul>
+                <p>We have sent a password reset link to your email 👌</p>
+                <div>
+                    Please go to your mailbox{' '}
+                    <span>{data.passwordData.email}</span> and click the link to
+                    set new password
+                </div>
                 <Button
                     title={'Got it 👍'}
                     color={'blue'}
@@ -36,4 +31,4 @@ const LoginDialog: React.FC = () => {
     );
 };
 
-export default LoginDialog;
+export default ResetDialog;

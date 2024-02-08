@@ -13,3 +13,4 @@ export { default as Modal } from './common/Modal/Modal';
 // dialogs
 export { default as LoginDialog } from './Dialogs/LoginDialog/LoginDialog';
 export { default as SignUpDialog } from './Dialogs/SignUpDialog/SignUpDialog';
+export { default as ResetDialog } from './Dialogs/ResetDialog/ResetDialog';

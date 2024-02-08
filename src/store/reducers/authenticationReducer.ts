@@ -6,7 +6,7 @@ import {
 } from '../../types/storeTypes';
 
 const initialState: IAuthentication = {
-    dialog: true,
+    dialog: false,
     data: {
         loginData: { email: '', password: '' },
         signUpData: {
@@ -16,6 +16,9 @@ const initialState: IAuthentication = {
             phone: '',
             password: '',
             confirmPassword: '',
+        },
+        passwordData: {
+            email: '',
         },
     },
 };
@@ -32,6 +35,9 @@ export const authenticationSlice = createSlice({
         },
         setSignUpData(state, action: PayloadAction<ISignUpData>) {
             state.data.signUpData = action.payload;
+        },
+        setPasswordData(state, action: PayloadAction<string>) {
+            state.data.passwordData.email = action.payload;
         },
         resetData(state) {
             state.data = initialState.data;

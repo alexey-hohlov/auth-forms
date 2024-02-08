@@ -1,6 +1,14 @@
 export interface IAuthentication {
     dialog: boolean;
-    data: { loginData: ILoginData; signUpData: ISignUpData };
+    data: {
+        loginData: ILoginData;
+        signUpData: ISignUpData;
+        passwordData: IPasswordData;
+    };
+}
+
+export interface IPasswordData {
+    email: string;
 }
 
 export interface ILoginData {

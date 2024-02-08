@@ -2,7 +2,7 @@ import styles from './SignUpDialog.module.scss';
 import { Modal, Button } from '../..';
 import { useAppSelector, useDialog } from '../../../hooks/reduxHooks';
 
-const SignUpDialog = () => {
+const SignUpDialog: React.FC = () => {
     const { dialog, data } = useAppSelector(
         state => state.authenticationReducer
     );
