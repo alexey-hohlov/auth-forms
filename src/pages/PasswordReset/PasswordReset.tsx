@@ -9,10 +9,11 @@ import { authenticationSlice } from '../../store/reducers/authenticationReducer'
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { IPasswordData } from '../../types/storeTypes';
 
+const MGlassWrapper = motion(GlassWrapper);
+const MInput = motion(Input);
+const MButton = motion(Button);
+
 const PasswordReset: React.FC = () => {
-    const MGlassWrapper = motion(GlassWrapper);
-    const MInput = motion(Input);
-    const MButton = motion(Button);
     const methods = useForm({
         mode: 'onSubmit',
         defaultValues: resetValues,

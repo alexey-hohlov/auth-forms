@@ -24,12 +24,13 @@ import { authenticationSlice } from '../../store/reducers/authenticationReducer'
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { ISignUpData } from '../../types/storeTypes';
 
+const MGlassWrapper = motion(GlassWrapper);
+const MInput = motion(Input);
+const MPasswordInput = motion(PasswordInput);
+const MPhoneInput = motion(PhoneInput);
+const MButton = motion(Button);
+
 const SignUp: React.FC = () => {
-    const MGlassWrapper = motion(GlassWrapper);
-    const MInput = motion(Input);
-    const MPasswordInput = motion(PasswordInput);
-    const MPhoneInput = motion(PhoneInput);
-    const MButton = motion(Button);
     const { setDialog, setSignUpData } = authenticationSlice.actions;
     const dispatch = useAppDispatch();
 

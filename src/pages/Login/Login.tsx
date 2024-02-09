@@ -21,13 +21,14 @@ import { authenticationSlice } from '../../store/reducers/authenticationReducer'
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { ILoginData } from '../../types/storeTypes';
 
+const MGlassWrapper = motion(GlassWrapper);
+const MInput = motion(Input);
+const MButton = motion(Button);
+const MPasswordInput = motion(PasswordInput);
+
 const Login: React.FC = () => {
     const { setDialog, setLoginData } = authenticationSlice.actions;
     const dispatch = useAppDispatch();
-    const MGlassWrapper = motion(GlassWrapper);
-    const MInput = motion(Input);
-    const MButton = motion(Button);
-    const MPasswordInput = motion(PasswordInput);
 
     const methods = useForm({
         mode: 'onSubmit',
