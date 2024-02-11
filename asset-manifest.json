@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/auth-forms/static/css/main.d4037cca.css",
+    "main.js": "/auth-forms/static/js/main.c8c4b9a2.js",
+    "static/media/background.jpg": "/auth-forms/static/media/background.924aa11924ed21638afa.jpg",
+    "static/media/Montserrat-BoldItalic.ttf": "/auth-forms/static/media/Montserrat-BoldItalic.a169c71c1eb466896fe1.ttf",
+    "static/media/Montserrat-Regular-Italic.ttf": "/auth-forms/static/media/Montserrat-Regular-Italic.f4a742d68090a0bfc33f.ttf",
+    "static/media/Montserrat-Bold.ttf": "/auth-forms/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
+    "static/media/Montserrat-Regular.ttf": "/auth-forms/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/github-icon.svg": "/auth-forms/static/media/github-icon.8cfb23669f761b6163d57a3d1e3e1f4b.svg",
+    "index.html": "/auth-forms/index.html",
+    "static/media/hide-icon.svg": "/auth-forms/static/media/hide-icon.4b99fc62db8aee4a9157d765470d737f.svg",
+    "static/media/show-icon.svg": "/auth-forms/static/media/show-icon.83b4018a1f8c5cf87f50c740adfde6aa.svg",
+    "static/media/error-icon.svg": "/auth-forms/static/media/error-icon.0c1a6b4d060c568b302743d625cc7702.svg",
+    "main.d4037cca.css.map": "/auth-forms/static/css/main.d4037cca.css.map",
+    "main.c8c4b9a2.js.map": "/auth-forms/static/js/main.c8c4b9a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4037cca.css",
+    "static/js/main.c8c4b9a2.js"
+  ]
+}
