@@ -20,9 +20,6 @@
     }
 }
 
-.text {
-}
-
 .link {
     text-decoration: none;
     display: flex;
@@ -31,5 +28,11 @@
 
     svg {
         width: 30px;
+    }
+
+    span {
+        &:hover {
+            color: var(--color-light);
+        }
     }
 }
