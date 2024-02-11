@@ -5,7 +5,7 @@ import { Layout, Login, PasswordReset, SignUp } from '../pages';
 function App() {
     const router = createBrowserRouter([
         {
-            path: 'auth-forms',
+            path: '/',
             element: <Layout />,
             children: [
                 { element: <Greetings />, index: true },
