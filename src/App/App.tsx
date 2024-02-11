@@ -8,7 +8,7 @@ function App() {
             path: '/',
             element: <Layout />,
             children: [
-                { element: <Greetings />, index: true },
+                { path: 'auth-forms', element: <Greetings />, index: true },
                 { path: 'login', element: <Login /> },
                 { path: 'sign-up', element: <SignUp /> },
                 { path: 'password-reset', element: <PasswordReset /> },
