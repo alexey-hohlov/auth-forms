@@ -8,6 +8,7 @@ import { resetValues } from '../../utils/defaultValues';
 import { authenticationSlice } from '../../store/reducers/authenticationReducer';
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { IPasswordData } from '../../types/storeTypes';
+import { Link } from 'react-router-dom';
 
 const MGlassWrapper = motion(GlassWrapper);
 const MInput = motion(Input);
@@ -57,7 +58,7 @@ const PasswordReset: React.FC = () => {
                             />
                             <motion.p variants={appear} custom={7}>
                                 Enter your user account's verified email address
-                                and we will send you a password reset link.
+                                and we will send you a password reset link
                             </motion.p>
                             <MButton
                                 title={'Send password reset email'}
@@ -67,6 +68,9 @@ const PasswordReset: React.FC = () => {
                             />
                         </form>
                     </FormProvider>
+                    <motion.div variants={appear} custom={12}>
+                        <Link to={'/login'}>Back to login page</Link>
+                    </motion.div>
                 </div>
             </MGlassWrapper>
             <ResetDialog />
