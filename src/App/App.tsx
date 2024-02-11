@@ -5,14 +5,14 @@ import { Layout, Login, PasswordReset, SignUp } from '../pages';
 function App() {
     const router = createBrowserRouter([
         {
-            path: '/',
+            path: 'auth-forms',
             element: <Layout />,
             children: [
-                { path: 'auth-forms', element: <Greetings />, index: true },
-                { path: 'auth-forms/login', element: <Login /> },
-                { path: 'auth-forms/sign-up', element: <SignUp /> },
+                { element: <Greetings />, index: true },
+                { path: 'login', element: <Login /> },
+                { path: 'sign-up', element: <SignUp /> },
                 {
-                    path: 'auth-forms/password-reset',
+                    path: 'password-reset',
                     element: <PasswordReset />,
                 },
             ],
