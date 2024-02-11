@@ -1,3 +1,25 @@
-## THIS APP IS UNDER DEVELOPMENT
+## Auth Forms
 
-If you are interested in examples of my code, please check out [my other projects](https://github.com/alexey-hohlov?tab=repositories)
+Just beautiful, animated and validated authorization forms that I have developed for demonstration purposes.
+
+
+## 💻 Technologies
+* TypeScript
+* React
+* Redux Toolkit
+* Framer Motion
+* React Hook Form
+
+## 🚀 Features
+* Validated forms
+* Animated components
+
+## 🤖 How to run
+
+```bash
+yarn install
+#
+yarn start
+```
+
+Go to [http://localhost:3000](http://localhost:3000) to see result
