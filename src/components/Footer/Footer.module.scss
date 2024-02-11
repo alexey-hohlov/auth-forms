@@ -1,0 +1,35 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 65px;
+    width: 100vw;
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    span {
+        color: var(--color-teal);
+    }
+}
+
+.text {
+}
+
+.link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    svg {
+        width: 40px;
+    }
+}

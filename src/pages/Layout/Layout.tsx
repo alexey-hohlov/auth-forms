@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import styles from './Layout.module.scss';
+import { Footer } from '../../components';
 
 const Layout: React.FC = () => {
     return (
@@ -7,6 +8,7 @@ const Layout: React.FC = () => {
             <div className={styles.content}>
                 <Outlet />
             </div>
+            <Footer />
         </section>
     );
 };

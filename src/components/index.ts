@@ -1,6 +1,6 @@
 // component exports
-
 export { default as Greetings } from './Greetings/Greetings';
+export { default as Footer } from './Footer/Footer';
 
 // reusable components
 export { default as Button } from './common/Button/Button';
