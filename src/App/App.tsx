@@ -9,9 +9,12 @@ function App() {
             element: <Layout />,
             children: [
                 { path: 'auth-forms', element: <Greetings />, index: true },
-                { path: 'login', element: <Login /> },
-                { path: 'sign-up', element: <SignUp /> },
-                { path: 'password-reset', element: <PasswordReset /> },
+                { path: 'auth-forms/login', element: <Login /> },
+                { path: 'auth-forms/sign-up', element: <SignUp /> },
+                {
+                    path: 'auth-forms/password-reset',
+                    element: <PasswordReset />,
+                },
             ],
         },
     ]);
