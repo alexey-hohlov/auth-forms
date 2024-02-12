@@ -1,11 +1,14 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import {
+    RouterProvider,
+    createHashRouter,
+} from 'react-router-dom';
 import { Greetings } from '../components';
 import { Layout, Login, PasswordReset, SignUp } from '../pages';
 
 function App() {
-    const router = createBrowserRouter([
+    const router = createHashRouter([
         {
-            path: 'auth-forms',
+            path: '/',
             element: <Layout />,
             children: [
                 { element: <Greetings />, index: true },
