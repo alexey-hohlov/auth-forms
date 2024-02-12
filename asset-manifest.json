@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/auth-forms/static/css/main.1120852f.css",
+    "main.css": "/auth-forms/static/css/main.ac68d419.css",
     "main.js": "/auth-forms/static/js/main.df3056a8.js",
     "static/media/background.jpg": "/auth-forms/static/media/background.924aa11924ed21638afa.jpg",
     "static/media/Montserrat-BoldItalic.ttf": "/auth-forms/static/media/Montserrat-BoldItalic.a169c71c1eb466896fe1.ttf",
@@ -12,11 +12,11 @@
     "static/media/hide-icon.svg": "/auth-forms/static/media/hide-icon.4b99fc62db8aee4a9157d765470d737f.svg",
     "static/media/show-icon.svg": "/auth-forms/static/media/show-icon.83b4018a1f8c5cf87f50c740adfde6aa.svg",
     "static/media/error-icon.svg": "/auth-forms/static/media/error-icon.0c1a6b4d060c568b302743d625cc7702.svg",
-    "main.1120852f.css.map": "/auth-forms/static/css/main.1120852f.css.map",
+    "main.ac68d419.css.map": "/auth-forms/static/css/main.ac68d419.css.map",
     "main.df3056a8.js.map": "/auth-forms/static/js/main.df3056a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.1120852f.css",
+    "static/css/main.ac68d419.css",
     "static/js/main.df3056a8.js"
   ]
 }
